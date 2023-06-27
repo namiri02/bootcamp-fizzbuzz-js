@@ -2,7 +2,7 @@
 
 Welcome to your first programming exercise in the bootcamp!
 
-## Aims
+## Aims
 
 - Remember how to program!
 - Get familiar with Javascript & Node
@@ -14,7 +14,7 @@ Welcome to your first programming exercise in the bootcamp!
 - Git
 - Node.js
 
-### Instructions
+### Instructions
 
 1. Fork this repository
 2. Clone the repo
