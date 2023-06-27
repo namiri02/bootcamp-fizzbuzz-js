@@ -2,7 +2,7 @@
 
 I remember playing FizzBuzz in primary school. You had to work it out in your _head_! What a lot of effort... good job we have computers to do such heavy lifting nowadays.
 
-## Part 1: What happens when bees drink lemonade?
+## Part 1: What happens when bees drink lemonade?
 
 Write a program that prints the numbers from 1 to 100. If a number is a multiple of three, print "Fizz" instead of the number. If the number is a multiple of five print "Buzz" instead of the number. For numbers which are multiples of both three and five print "FizzBuzz" instead of the number.
 
