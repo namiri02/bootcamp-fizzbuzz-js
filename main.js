@@ -11,31 +11,43 @@ function reverseOrder(str){
     return splitString.reverse().join('').toString();
 }
 
+// Check if a given number is a triangle number
+function isTriangleNumber(num){
+   return (Number.isInteger(((Math.sqrt((8*num + 1))) - 1)/2));
+}
+
 // Main function
 function fizzbuzz() {
+    // Getting command line arguments
+    const commandLineArgs = process.argv.splice(2, process.argv.length);
+    // Converting command line arguments to integers
+    const rulesImplemented = commandLineArgs.map(x => +x);
+
+    // Getting maximum number from user
     var upToX = readlineSync.question('Please enter the number you would like to FizzBuzz etc. up to: ');
     upToX = +upToX;
 
+    // Main for loop to do FizzBuzz...
     for (let i = 1; i < upToX + 1; i++){
         var stringToPrint = '';
 
-        if (divByNumber(3, i)){
+        if (divByNumber(3, i) && rulesImplemented.includes(3)){
             stringToPrint += 'Fizz';
         }
 
-        if (divByNumber(5, i)){
+        if (divByNumber(5, i) && rulesImplemented.includes(5)){
             stringToPrint += 'Buzz';
         }
 
-        if (divByNumber(7, i)){
+        if (divByNumber(7, i) && rulesImplemented.includes(7)){
             stringToPrint += 'Bang';
         }
 
-        if (divByNumber(11, i)){
+        if (divByNumber(11, i) && rulesImplemented.includes(11)){
             stringToPrint = 'Bong';
         }
 
-        if (divByNumber(13, i)){
+        if (divByNumber(13, i) && rulesImplemented.includes(13)){
             const indexB = stringToPrint.indexOf('B');
             if (indexB != -1){
                 stringToPrint = stringToPrint.slice(0, indexB) + 'Fezz' + stringToPrint.slice(indexB);
@@ -45,14 +57,20 @@ function fizzbuzz() {
             }
         }
 
-        if (divByNumber(17, i)){
-            stringToPrint = reverseOrder(stringToPrint)
+        if (divByNumber(17, i) && rulesImplemented.includes(17)){
+            stringToPrint = reverseOrder(stringToPrint);
+        }
+
+        // Check if triangle number
+        if (isTriangleNumber(i)){
+            stringToPrint = stringToPrint.toString().replaceAll(/[A-Z]/g, 'T');
         }
 
         if (stringToPrint == ''){
             stringToPrint = i;
         }
         
+        // Print string
         console.log(stringToPrint);
     }
 }
