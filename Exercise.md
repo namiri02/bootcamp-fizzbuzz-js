@@ -34,8 +34,8 @@ Read a value in from the console, then print up to that number.
 ### Allow the user to specify command-line options
 Let the user pass in which rules to implement (e.g. any combination of 3, 5, 7, 11, 13, 17) as a command line parameter (or via some other means of your choice).
 
-### Prime time
-If a number is a prime, change all of the fizzes, buzzes, bangs, etc. to begin with the letter "P".
+### Triangle time
+If a number is a [triangle number](https://en.wikipedia.org/wiki/Triangular_number), change all of the fizzes, buzzes, bangs, etc. to begin with the letter "T".
 
 ### Write some unit tests
 Talk to your trainer for help if you get to this point.
