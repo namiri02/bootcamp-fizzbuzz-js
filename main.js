@@ -24,12 +24,12 @@ function fizzbuzz() {
     const rulesImplemented = commandLineArgs.map(x => +x);
 
     // Getting maximum number from user
-    var upToX = readlineSync.question('Please enter the number you would like to FizzBuzz etc. up to: ');
+    let upToX = readlineSync.question('Please enter the number you would like to FizzBuzz etc. up to: ');
     upToX = +upToX;
 
     // Main for loop to do FizzBuzz...
     for (let i = 1; i < upToX + 1; i++){
-        var stringToPrint = '';
+        let stringToPrint = '';
 
         if (divByNumber(3, i) && rulesImplemented.includes(3)){
             stringToPrint += 'Fizz';
